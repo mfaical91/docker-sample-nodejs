@@ -1,12 +1,15 @@
 services:
   app:
     build: .
+    environment:
+      NODE_ENV: development
     ports:
       - "3000:3000"
-      depends_on:
+    depends_on:
         - db
-      volumes:
+    volumes:
       - .:/app
+
   mailhog:
     image: mailhog/mailhog
     ports:
