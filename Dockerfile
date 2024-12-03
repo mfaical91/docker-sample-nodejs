@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 3000
 
 #démarrer l'application
-CMD [ "Knpm","start" ]
+CMD [ "npm","start" ]

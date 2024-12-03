@@ -9,7 +9,8 @@ services:
         - db
     volumes:
       - .:/app
-
+      - /app/node_modules
+      
   mailhog:
     image: mailhog/mailhog
     ports:
@@ -19,6 +20,6 @@ services:
   db:
     image: postgres:12
     environment:
-      - POSTGRES_USER:postgres
-      - POSTGRES_PASSWORD:postgres
-      - POSTGRES_DB:postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres

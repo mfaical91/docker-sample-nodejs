@@ -9,7 +9,7 @@ services:
         - db
     volumes:
       - .:/app
-
+     
   mailhog:
     image: mailhog/mailhog
     ports:
